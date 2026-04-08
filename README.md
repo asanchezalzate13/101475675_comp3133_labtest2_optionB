@@ -16,17 +16,6 @@ The app uses `HttpClient` through a dedicated `PotterApiService`, TypeScript int
 - **Angular control flow**: `@for`, `@if`, and `@switch` in templates; **signals** for async UI state; a **pipe** (`houseColor`) for house accent colors.
 - **Modules (rubric)**: `HttpClientModule`, `FormsModule`, and `ReactiveFormsModule` are registered via `importProvidersFrom` in `app.config.ts` (standalone app equivalent to root module imports).
 
-## Screenshots (for your D2L / README)
-
-Add your own screenshots under `docs/` or the repo root, for example:
-
-1. **Running app** — toolbar with “Characters” and “By house”, character grid on the list page.
-2. **Filter page** — dropdown set to a house (e.g. Slytherin) with matching cards.
-3. **Details page** — one character with image and fields (wand, actor, etc.).
-4. **Code** — short captures of `potter-api.ts`, one component template, and `models/character.model.ts`.
-
-Replace this section with embedded images in Markdown, e.g. `![Character list](docs/screenshot-list.png)`.
-
 ## How to run the project
 
 Prerequisites: **Node.js** (LTS recommended) and **npm**.
