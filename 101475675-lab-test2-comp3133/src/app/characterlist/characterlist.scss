@@ -1,0 +1,93 @@
+.page {
+  padding: 1rem 1.25rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.75rem;
+}
+
+.page-sub {
+  margin: 0 0 1.25rem;
+  opacity: 0.85;
+}
+
+.search-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.search-field {
+  width: min(420px, 100%);
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.error {
+  color: var(--mat-sys-error);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.char-card {
+  background: #121212;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+
+.portrait {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+}
+
+.name {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.house {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.house.gryffindor {
+  color: #c41e3a;
+}
+
+.house.slytherin {
+  color: #2a623d;
+}
+
+.house.ravenclaw {
+  color: #4a90d9;
+}
+
+.house.hufflepuff {
+  color: #ecb939;
+}
+
+.house.none {
+  color: #b0bec5;
+}

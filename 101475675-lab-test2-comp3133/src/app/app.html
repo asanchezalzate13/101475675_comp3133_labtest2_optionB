@@ -1,0 +1,14 @@
+<div class="app-frame">
+  <mat-toolbar color="primary" class="top-bar">
+    <span class="brand">{{ headerTitle() }}</span>
+    <span class="spacer"></span>
+    <a mat-button routerLink="/characters" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      Characters
+    </a>
+    <a mat-button routerLink="/by-house" routerLinkActive="active">By house</a>
+  </mat-toolbar>
+
+  <main class="main">
+    <router-outlet />
+  </main>
+</div>

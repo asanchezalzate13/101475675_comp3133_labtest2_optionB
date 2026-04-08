@@ -1,0 +1,38 @@
+<section class="page">
+  <h1 class="page-title">Harry Potter Characters Filter</h1>
+  <p class="page-sub">Choose a Hogwarts house to see its members (or all characters).</p>
+
+  <div class="filter-row">
+    <mat-form-field appearance="outline" class="house-field">
+      <mat-label>House</mat-label>
+      <mat-select [formControl]="houseControl">
+        <mat-option value="all">All characters</mat-option>
+        @for (h of houses; track h) {
+          <mat-option [value]="h">{{ h }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  @if (loading()) {
+    <div class="centered">
+      <mat-spinner diameter="48" />
+    </div>
+  } @else if (error()) {
+    <p class="error">{{ error() }}</p>
+  } @else {
+    <div class="card-grid">
+      @for (c of characters(); track c.id) {
+        <mat-card class="char-card">
+          <img mat-card-image class="portrait" [src]="c.image" [alt]="c.name" loading="lazy" />
+          <mat-card-content class="card-body">
+            <h2 class="name">{{ c.name }}</h2>
+            <p class="actor">Actor: {{ c.actor }}</p>
+            <p class="house" [style.color]="c.house | houseColor">{{ c.house || 'No house' }}</p>
+            <a mat-button color="accent" [routerLink]="['/character', c.id]">Details</a>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  }
+</section>

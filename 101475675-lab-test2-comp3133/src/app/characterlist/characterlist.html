@@ -1,0 +1,54 @@
+<section class="page">
+  <h1 class="page-title">Character List</h1>
+  <p class="page-sub">All Harry Potter characters from the API.</p>
+
+  <div class="search-row">
+    <mat-form-field appearance="outline" class="search-field">
+      <mat-label>Search by name</mat-label>
+      <input
+        matInput
+        name="searchText"
+        [ngModel]="searchText()"
+        (ngModelChange)="searchText.set($event)"
+        placeholder="e.g. Harry"
+      />
+    </mat-form-field>
+  </div>
+
+  @if (loading()) {
+    <div class="centered">
+      <mat-spinner diameter="48" />
+    </div>
+  } @else if (error()) {
+    <p class="error">{{ error() }}</p>
+  } @else {
+    <div class="card-grid">
+      @for (c of filteredCharacters(); track c.id) {
+        <mat-card class="char-card">
+          <img mat-card-image class="portrait" [src]="c.image" [alt]="c.name" loading="lazy" />
+          <mat-card-content class="card-body">
+            <h2 class="name">{{ c.name }}</h2>
+            @switch (c.house) {
+              @case ('Gryffindor') {
+                <p class="house gryffindor">{{ c.house }}</p>
+              }
+              @case ('Slytherin') {
+                <p class="house slytherin">{{ c.house }}</p>
+              }
+              @case ('Ravenclaw') {
+                <p class="house ravenclaw">{{ c.house }}</p>
+              }
+              @case ('Hufflepuff') {
+                <p class="house hufflepuff">{{ c.house }}</p>
+              }
+              @default {
+                <p class="house none">{{ c.house || 'No house' }}</p>
+              }
+            }
+            <a mat-button color="primary" [routerLink]="['/character', c.id]">View details</a>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  }
+</section>

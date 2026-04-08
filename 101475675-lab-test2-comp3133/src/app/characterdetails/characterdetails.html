@@ -1,0 +1,58 @@
+<section class="page">
+  <a mat-button routerLink="/characters" color="primary">← Back to list</a>
+
+  @if (loading()) {
+    <div class="centered">
+      <mat-spinner diameter="48" />
+    </div>
+  } @else if (error()) {
+    <p class="error">{{ error() }}</p>
+  } @else {
+    @if (character(); as ch) {
+      <mat-card class="detail-card">
+        <div class="detail-layout">
+          <div class="image-col">
+            <img class="hero" [src]="ch.image" [alt]="ch.name" />
+          </div>
+          <div class="info-col">
+            <h1 class="char-name">{{ ch.name }}</h1>
+            <dl class="facts">
+              <div class="row">
+                <dt>House:</dt>
+                <dd>{{ ch.house || '—' }}</dd>
+              </div>
+              <div class="row">
+                <dt>Actor:</dt>
+                <dd>{{ ch.actor }}</dd>
+              </div>
+              <div class="row">
+                <dt>Wizard:</dt>
+                <dd>{{ ch.wizard }}</dd>
+              </div>
+              <div class="row">
+                <dt>Species:</dt>
+                <dd>{{ ch.species }}</dd>
+              </div>
+              <div class="row">
+                <dt>Ancestry:</dt>
+                <dd>{{ ch.ancestry || '—' }}</dd>
+              </div>
+              <div class="row">
+                <dt>Wand Wood:</dt>
+                <dd>{{ ch.wand.wood || '—' }}</dd>
+              </div>
+              <div class="row">
+                <dt>Wand Core:</dt>
+                <dd>{{ ch.wand.core || '—' }}</dd>
+              </div>
+              <div class="row">
+                <dt>Wand Length:</dt>
+                <dd>{{ wandLengthText(ch.wand.length) }}</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </mat-card>
+    }
+  }
+</section>
