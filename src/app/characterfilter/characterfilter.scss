@@ -22,6 +22,25 @@
 
 .house-field {
   min-width: 240px;
+
+  ::ng-deep .mat-mdc-select {
+    color: #ffffff;
+  }
+
+  ::ng-deep .mat-mdc-select-arrow svg {
+    fill: currentColor;
+  }
+
+  ::ng-deep .mat-mdc-floating-label,
+  ::ng-deep .mdc-floating-label--float-above {
+    color: rgba(255, 255, 255, 0.75) !important;
+  }
+
+  ::ng-deep .mdc-notched-outline .mdc-notched-outline__leading,
+  ::ng-deep .mdc-notched-outline .mdc-notched-outline__notch,
+  ::ng-deep .mdc-notched-outline .mdc-notched-outline__trailing {
+    border-color: rgba(255, 255, 255, 0.45) !important;
+  }
 }
 
 .centered {

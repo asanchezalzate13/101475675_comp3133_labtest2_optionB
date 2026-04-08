@@ -37,3 +37,17 @@ body {
   height: 100%;
 }
 /* You can add global styles to this file, and also import other style files */
+
+/* mat-select panel renders in CDK overlay — must be global; class set on characterfilter mat-select */
+.hp-house-select-panel.mat-mdc-select-panel {
+  background-color: #2a2a2a;
+
+  .mat-mdc-option .mdc-list-item__primary-text {
+    color: #ffffff;
+  }
+
+  .mat-mdc-option:hover:not(.mdc-list-item--disabled),
+  .mat-mdc-option.mat-mdc-option-active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
