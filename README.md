@@ -48,10 +48,26 @@ npm run build
 
 Output: `dist/101475675-lab-test2-comp3133/browser/`.
 
-## Deployment (Vercel / Render)
+## Hosted application (Vercel)
 
-- **Vercel**: connect the repo; set **Framework Preset** to Angular; **Output directory** `dist/101475675-lab-test2-comp3133/browser`. This repo includes `vercel.json` with SPA rewrites for deep links such as `/character/:id`.
-- **Render** (static site): build command `npm install && npm run build`, publish directory `dist/101475675-lab-test2-comp3133/browser/`.
+The app is available online at **Vercel** — no clone or install needed to try it.
+
+| Page | URL |
+|------|-----|
+| **Home** (redirects to character list) | [https://101475675-comp3133-labtest2-option-two.vercel.app/](https://101475675-comp3133-labtest2-option-two.vercel.app/) |
+| **Character list** | [https://101475675-comp3133-labtest2-option-two.vercel.app/characters](https://101475675-comp3133-labtest2-option-two.vercel.app/characters) |
+| **Filter by house** | [https://101475675-comp3133-labtest2-option-two.vercel.app/by-house](https://101475675-comp3133-labtest2-option-two.vercel.app/by-house) |
+
+Character details open when you click **View details** / **Details** on a card. You can also bookmark a direct URL:  
+`https://101475675-comp3133-labtest2-option-two.vercel.app/character/<id>` (use a character `id` from the [HP API](https://hp-api.onrender.com/)).
+
+## How to view the application
+
+For anyone who only wants to see the running project:
+
+1. Open **[https://101475675-comp3133-labtest2-option-two.vercel.app/](https://101475675-comp3133-labtest2-option-two.vercel.app/)** in a browser (Chrome, Firefox, Edge, Safari, etc.).
+2. Use the top bar: **Characters** for the full list with search, or **By house** for the house filter dropdown.
+3. Click a character card to open the **details** page. Data is loaded from the public Harry Potter API, so a normal internet connection is required.
 
 ## API references
 
