@@ -1,5 +1,7 @@
 # 101475675-lab-test2-comp3133 — Harry Potter API (COMP 3133 Lab Test 2b)
 
+Repository: [101475675_comp3133_labtest2_optionB](https://github.com/asanchezalzate13/101475675_comp3133_labtest2_optionB) (Angular app lives at the **repo root** next to `angular.json`).
+
 Angular application that loads character data from the public [HP API](https://hp-api.onrender.com/) (`https://hp-api.onrender.com`), with list, house filter, and detail views.
 
 ## App description
@@ -30,7 +32,8 @@ Replace this section with embedded images in Markdown, e.g. `![Character list](d
 Prerequisites: **Node.js** (LTS recommended) and **npm**.
 
 ```bash
-cd 101475675-lab-test2-comp3133
+git clone https://github.com/asanchezalzate13/101475675_comp3133_labtest2_optionB.git
+cd 101475675_comp3133_labtest2_optionB
 npm install
 npm start
 ```
