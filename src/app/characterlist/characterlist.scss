@@ -22,6 +22,15 @@
 
 .search-field {
   width: min(420px, 100%);
+
+  ::ng-deep input.mat-mdc-input-element {
+    color: #ffffff;
+    caret-color: #ffffff;
+  }
+
+  ::ng-deep input.mat-mdc-input-element::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+  }
 }
 
 .centered {
